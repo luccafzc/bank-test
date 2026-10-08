@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aurora — Seu espaço financeiro</title>
+  <meta name="description" content="Sua conta, seu extrato e suas finanças em um só lugar.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23142232'/%3E%3Cpath d='M10 29 20 9l10 20h-7l-3-7-3 7z' fill='%23bafa73'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css"><script src="./config.js" defer></script><script src="./app.js" defer></script>
+</head>
+<body>
+<svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M8 5h13M8 12h13M8 19h13M3 5h.1M3 12h.1M3 19h.1"/></symbol>
+<symbol id="i-transfer" viewBox="0 0 24 24"><path d="M3 7h17l-4-4M21 17H4l4 4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="i-out" viewBox="0 0 24 24"><path d="M9 4H4v16h5m4-12 4 4-4 4m-5-4h13"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 7V4H5a2 2 0 0 0 0 4h16v12H5a2 2 0 0 1-2-2V6m18 6h-6v4h6"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+</defs></svg>
+<aside class="sidebar">
+ <a class="brand" href="#overview" aria-label="Aurora início"><span class="brand-mark">a</span>aurora<span class="brand-dot">.</span></a>
+ <div class="workspace-tag">SEU ESPAÇO FINANCEIRO</div>
+ <nav aria-label="Menu principal">
+  <button class="nav-item active" data-page="overview"><svg><use href="#i-grid"/></svg>Visão geral</button>
+  <button class="nav-item" data-page="transactions"><svg><use href="#i-list"/></svg>Extrato</button>
+  <button class="nav-item" data-page="transfers"><svg><use href="#i-transfer"/></svg>Transferências</button>
+  <button class="nav-item" data-page="account"><svg><use href="#i-user"/></svg>Minha conta</button>
+ </nav>
+ <div class="sidebar-bottom"><div class="security-note"><svg><use href="#i-shield"/></svg><span>Um espaço só seu.<small>Suas finanças, organizadas.</small></span></div><button class="profile" id="profile-button"><span class="avatar" id="avatar">MC</span><span><b id="profile-name">Marina Costa</b><small id="profile-type">Conta de demonstração</small></span><svg><use href="#i-out"/></svg></button></div>
+</aside>
+<div class="main-shell">
+ <header class="topbar"><span id="breadcrumb">Minha conta <span class="slash">/</span> <strong>Visão geral</strong></span><div class="topbar-right"><span class="environment" id="environment">Demonstração</span><button class="button small" id="auth-button">Acessar minha conta</button></div></header>
+ <main id="content" tabindex="-1">
+  <section class="page-heading"><div><p class="eyebrow">QUARTA-FEIRA, 7 DE OUTUBRO</p><h1>Olá, Marina <span class="hello-dot">✳</span></h1><p>Acompanhe seu dinheiro. Planeje seus próximos passos.</p></div><button class="button primary" data-action="new-entry"><svg><use href="#i-plus"/></svg>Novo lançamento</button></section>
+  <div class="demo-notice">Você está explorando uma conta com dados fictícios. Nenhum dinheiro real é movimentado.</div>
+  <section class="summary-grid"><article class="balance-card"><div class="card-label">Saldo disponível<button class="icon-button" id="toggle-balance" aria-label="Ocultar valores"><svg><use href="#i-eye"/></svg></button></div><h2>R$ 12.480,50</h2><div class="balance-bottom"><span>Conta Aurora <b>• BRL</b></span><svg><use href="#i-wallet"/></svg></div></article><article class="metric-card"><div class="metric-icon incoming"><svg><use href="#i-down"/></svg></div><span>Entradas do mês</span><h2>R$ 8.250,00</h2><small>3 recebimentos em outubro</small></article><article class="metric-card"><div class="metric-icon outgoing"><svg><use href="#i-up"/></svg></div><span>Saídas do mês</span><h2>R$ 3.769,50</h2><small>6 pagamentos em outubro</small></article></section>
+  <section class="panel initial-panel"><div class="panel-heading"><div><h2>Seu mês em movimento</h2><p>Entradas e saídas de outubro</p></div></div><div class="initial-chart"><div style="height:30%"></div><div style="height:48%"></div><div style="height:36%"></div><div style="height:70%"></div><div style="height:52%"></div><div style="height:87%"></div><div style="height:62%"></div></div></section>
+ </main>
+ <footer><span>aurora. <span class="footer-muted">Clareza para sua vida financeira.</span></span><span>Valores em reais · BRL</span></footer>
+</div>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-heading"><h2 id="modal-title"></h2><button class="icon-button" id="close-modal" aria-label="Fechar">×</button></div><div id="modal-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>

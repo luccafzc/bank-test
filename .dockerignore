@@ -1,0 +1,7 @@
+.git
+.env
+.openai
+tests
+__pycache__
+.pytest_cache
+*.db

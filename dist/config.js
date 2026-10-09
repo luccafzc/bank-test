@@ -1,1 +1,1 @@
-window.AURORA_CONFIG = {mode: 'demo'};
+window.FINANS_CONFIG = {mode: 'demo'};

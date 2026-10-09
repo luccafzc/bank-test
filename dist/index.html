@@ -2,9 +2,19 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Aurora — Seu espaço financeiro</title>
-  <meta name="description" content="Sua conta, seu extrato e suas finanças em um só lugar.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23142232'/%3E%3Cpath d='M10 29 20 9l10 20h-7l-3-7-3 7z' fill='%23bafa73'/%3E%3C/svg%3E">
+  <title>Finans — Sua vida financeira descomplicada</title>
+  <meta name="description" content="Finans: sua conta, seu extrato e suas finanças em um só lugar. Organize entradas, saídas e transferências internas simuladas.">
+  <meta name="application-name" content="Finans">
+  <meta name="theme-color" content="#198754">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Finans">
+  <meta property="og:title" content="Finans — Sua vida financeira descomplicada">
+  <meta property="og:description" content="Organize seu dinheiro com Finans. Saldo, extrato e transferências internas simuladas em um só lugar.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finans — Sua vida financeira descomplicada">
+  <meta name="twitter:description" content="Sua conta, seu extrato e suas finanças em um só lugar.">
+  <link rel="icon" type="image/svg+xml" href="./assets/finans-icon.svg">
   <link rel="stylesheet" href="./styles.css"><script src="./config.js" defer></script><script src="./app.js" defer></script>
 </head>
 <body>
@@ -24,25 +34,25 @@
 <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
 </defs></svg>
 <aside class="sidebar">
- <a class="brand" href="#overview" aria-label="Aurora início"><span class="brand-mark">a</span>aurora<span class="brand-dot">.</span></a>
- <div class="workspace-tag">SEU ESPAÇO FINANCEIRO</div>
+ <a class="brand" href="#overview" aria-label="Finans — início"><img class="brand-logo" src="./assets/finans-logo.png" alt="Finans" width="261" height="68"></a>
+ <div class="workspace-tag">FINANÇAS DESCOMPLICADAS</div>
  <nav aria-label="Menu principal">
   <button class="nav-item active" data-page="overview"><svg><use href="#i-grid"/></svg>Visão geral</button>
   <button class="nav-item" data-page="transactions"><svg><use href="#i-list"/></svg>Extrato</button>
   <button class="nav-item" data-page="transfers"><svg><use href="#i-transfer"/></svg>Transferências</button>
   <button class="nav-item" data-page="account"><svg><use href="#i-user"/></svg>Minha conta</button>
  </nav>
- <div class="sidebar-bottom"><div class="security-note"><svg><use href="#i-shield"/></svg><span>Um espaço só seu.<small>Suas finanças, organizadas.</small></span></div><button class="profile" id="profile-button"><span class="avatar" id="avatar">MC</span><span><b id="profile-name">Marina Costa</b><small id="profile-type">Conta de demonstração</small></span><svg><use href="#i-out"/></svg></button></div>
+ <div class="sidebar-bottom"><div class="security-note"><svg><use href="#i-shield"/></svg><span>Sua conta Finans.<small>Seu dinheiro, organizado.</small></span></div><button class="profile" id="profile-button"><span class="avatar" id="avatar">MC</span><span><b id="profile-name">Marina Costa</b><small id="profile-type">Conta de demonstração</small></span><svg><use href="#i-out"/></svg></button></div>
 </aside>
 <div class="main-shell">
  <header class="topbar"><span id="breadcrumb">Minha conta <span class="slash">/</span> <strong>Visão geral</strong></span><div class="topbar-right"><span class="environment" id="environment">Demonstração</span><button class="button small" id="auth-button">Acessar minha conta</button></div></header>
  <main id="content" tabindex="-1">
-  <section class="page-heading"><div><p class="eyebrow">QUARTA-FEIRA, 7 DE OUTUBRO</p><h1>Olá, Marina <span class="hello-dot">✳</span></h1><p>Acompanhe seu dinheiro. Planeje seus próximos passos.</p></div><button class="button primary" data-action="new-entry"><svg><use href="#i-plus"/></svg>Novo lançamento</button></section>
+  <section class="page-heading"><div><p class="eyebrow">QUARTA-FEIRA, 7 DE OUTUBRO</p><h1>Olá, Marina <span class="hello-dot" aria-hidden="true">•</span></h1><p>Acompanhe seu dinheiro. Planeje seus próximos passos.</p></div><button class="button primary" data-action="new-entry"><svg><use href="#i-plus"/></svg>Novo lançamento</button></section>
   <div class="demo-notice">Você está explorando uma conta com dados fictícios. Nenhum dinheiro real é movimentado.</div>
-  <section class="summary-grid"><article class="balance-card"><div class="card-label">Saldo disponível<button class="icon-button" id="toggle-balance" aria-label="Ocultar valores"><svg><use href="#i-eye"/></svg></button></div><h2>R$ 12.480,50</h2><div class="balance-bottom"><span>Conta Aurora <b>• BRL</b></span><svg><use href="#i-wallet"/></svg></div></article><article class="metric-card"><div class="metric-icon incoming"><svg><use href="#i-down"/></svg></div><span>Entradas do mês</span><h2>R$ 8.250,00</h2><small>3 recebimentos em outubro</small></article><article class="metric-card"><div class="metric-icon outgoing"><svg><use href="#i-up"/></svg></div><span>Saídas do mês</span><h2>R$ 3.769,50</h2><small>6 pagamentos em outubro</small></article></section>
+  <section class="summary-grid"><article class="balance-card"><div class="card-label">Saldo disponível<button class="icon-button" id="toggle-balance" aria-label="Ocultar valores"><svg><use href="#i-eye"/></svg></button></div><h2>R$ 12.480,50</h2><div class="balance-bottom"><span>Conta Finans <b>• BRL</b></span><svg><use href="#i-wallet"/></svg></div></article><article class="metric-card"><div class="metric-icon incoming"><svg><use href="#i-down"/></svg></div><span>Entradas do mês</span><h2>R$ 8.250,00</h2><small>3 recebimentos em outubro</small></article><article class="metric-card"><div class="metric-icon outgoing"><svg><use href="#i-up"/></svg></div><span>Saídas do mês</span><h2>R$ 3.769,50</h2><small>6 pagamentos em outubro</small></article></section>
   <section class="panel initial-panel"><div class="panel-heading"><div><h2>Seu mês em movimento</h2><p>Entradas e saídas de outubro</p></div></div><div class="initial-chart"><div style="height:30%"></div><div style="height:48%"></div><div style="height:36%"></div><div style="height:70%"></div><div style="height:52%"></div><div style="height:87%"></div><div style="height:62%"></div></div></section>
  </main>
- <footer><span>aurora. <span class="footer-muted">Clareza para sua vida financeira.</span></span><span>Valores em reais · BRL</span></footer>
+ <footer><span>Finans <span class="footer-muted">Sua vida financeira descomplicada.</span></span><span>Valores em reais · BRL</span></footer>
 </div>
 <dialog id="modal" aria-labelledby="modal-title"><div class="modal-heading"><h2 id="modal-title"></h2><button class="icon-button" id="close-modal" aria-label="Fechar">×</button></div><div id="modal-body"></div></dialog>
 <div id="toast" role="status" aria-live="polite"></div>

@@ -1,4 +1,4 @@
-"""Aurora: personal finance ledger with internal, simulated transfers."""
+"""Finans: personal finance ledger with internal, simulated transfers."""
 import csv
 import hashlib
 import io
@@ -150,7 +150,7 @@ def create_app(test_config=None):
         query={"charset": "utf8mb4"})
     engine = create_engine(database, pool_pre_ping=True, pool_recycle=1800)
     if engine.dialect.name != "mysql" and not app.config["TESTING"]:
-        raise RuntimeError("Aurora requer MySQL. SQLite é permitido apenas nos testes.")
+        raise RuntimeError("Finans requer MySQL. SQLite é permitido apenas nos testes.")
     app.extensions["engine"] = engine
 
     @app.cli.command("init-db")
@@ -380,7 +380,7 @@ def create_app(test_config=None):
             return jsonify(id=old.result_id, duplicate=True)
         recipient = next((u for u in users if u.email == email), None)
         if recipient is None:
-            raise APIError("Destinatário não encontrado. Use o e-mail de uma conta Aurora.", 404)
+            raise APIError("Destinatário não encontrado. Use o e-mail de uma conta Finans.", 404)
         if recipient.id == sender.id:
             raise APIError("Escolha outra conta para transferir.")
         if sender.balance_cents < cents:
@@ -408,7 +408,7 @@ def create_app(test_config=None):
             writer.writerow([entry.created_at.replace(tzinfo=timezone.utc).astimezone(TZ).isoformat(), description,
                              entry.category, f"{Decimal(entry.amount_cents) / 100:.2f}"])
         return Response("\ufeff" + buffer.getvalue(), mimetype="text/csv; charset=utf-8",
-                        headers={"Content-Disposition": f'attachment; filename="aurora-{period()[0]}.csv"'})
+                        headers={"Content-Disposition": f'attachment; filename="finans-{period()[0]}.csv"'})
 
     @app.get("/api/health")
     def health():
@@ -417,7 +417,7 @@ def create_app(test_config=None):
 
     @app.get("/config.js")
     def config():
-        return Response("window.AURORA_CONFIG = {mode: 'api'};", mimetype="application/javascript")
+        return Response("window.FINANS_CONFIG = {mode: 'api'};", mimetype="application/javascript")
 
     @app.get("/")
     def index():

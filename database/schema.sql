@@ -1,4 +1,4 @@
--- Aurora initial schema, generated from backend models.
+-- Finans initial schema, generated from backend models.
 -- Apply only to a new database; init-db is the preferred path.
 SET NAMES utf8mb4;
 

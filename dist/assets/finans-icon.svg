@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Finans</title>
+  <rect width="64" height="64" rx="14" fill="#198754"/>
+  <circle cx="32" cy="32" r="23" fill="#fff"/>
+  <path d="M39 24c-2-3-11-4-13 1-3 7 14 6 13 13-1 6-11 7-16 2m9-23v30" fill="none" stroke="#13633d" stroke-width="4" stroke-linecap="round"/>
+</svg>
